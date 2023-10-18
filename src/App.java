@@ -2,6 +2,9 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.List;
+import java.util.Map;
+
 
 public class App {
     public static void main(String[] args) throws Exception{
@@ -19,7 +22,9 @@ public class App {
 
 
         // limpar os dados que interressam (titulo, img e rank) passear os dados
-        // Exibir e manipular os dados na aplicação
+        var jsonParse = new JsonParse();
+        List<Map<String, String>> listaDeFilmes = jsonParse.parse(body);
+        System.out.println(listaDeFilmes.size());// Exibir e manipular os dados na aplicação
 
 
     }
