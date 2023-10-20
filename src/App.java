@@ -24,8 +24,16 @@ public class App {
         // limpar os dados que interressam (titulo, img e rank) passear os dados
         var jsonParse = new JsonParse();
         List<Map<String, String>> listaDeFilmes = jsonParse.parse(body);
-        System.out.println(listaDeFilmes.size());// Exibir e manipular os dados na aplicação
+        System.out.println(listaDeFilmes.size());
+        // Exibir e manipular os dados na aplicação
 
+        for (Map<String, String> filme: listaDeFilmes){
+            System.out.println("Nome do filme: " + filme.get("title"));
+            System.out.println("Poster: " + filme.get("image"));
+            System.out.println("Nota: " + filme.get("imDbRating"));
+            System.out.println("Ano: " + filme.get("year"));
+            System.out.println();
+        }
 
     }
 }
