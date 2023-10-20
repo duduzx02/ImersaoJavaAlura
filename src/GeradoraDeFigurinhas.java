@@ -17,8 +17,8 @@ public class GeradoraDeFigurinhas {
         int altura = imagemOriginal.getHeight();
         int novaAltura = altura + 200;
 
-        BufferedImage novaImagem = new BufferedImage(largura, novaAltura, Transparency.TRANSLUCENT);
-        // BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
+        //BufferedImage novaImagem = new BufferedImage(largura, novaAltura, Transparency.TRANSLUCENT);
+         BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
 
         // copiar imagem original para nova imagem
 
@@ -28,7 +28,15 @@ public class GeradoraDeFigurinhas {
         // escrever uma msg na nova imagem
         // escrever a img em uma novo arquivo
 
+        ImageIO.write(novaImagem, "png", new File("saida/figurinha2.png"));
 
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        GeradoraDeFigurinhas gera = new GeradoraDeFigurinhas();
+
+        gera.cria();
     }
 
 }
