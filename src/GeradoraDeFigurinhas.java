@@ -1,4 +1,5 @@
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +12,17 @@ public class GeradoraDeFigurinhas {
         BufferedImage imagemOriginal = ImageIO.read(new File("entradas/filme.jpg"));
 
         // cria nova em memoria com transparencia e com tamanho novo
+
+        int largura = imagemOriginal.getWidth();
+        int altura = imagemOriginal.getHeight();
+        int novaAltura = altura + 200;
+
+        BufferedImage novaImagem = new BufferedImage(largura, novaAltura, Transparency.TRANSLUCENT);
+        // BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
+
         // copiar imagem original para nova imagem
+
+
         // escrever uma msg na nova imagem
         // escrever a img em uma novo arquivo
     }
