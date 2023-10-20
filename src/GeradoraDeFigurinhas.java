@@ -22,9 +22,13 @@ public class GeradoraDeFigurinhas {
 
         // copiar imagem original para nova imagem
 
+        Graphics2D grafics = (Graphics2D) novaImagem.getGraphics();
+        grafics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma msg na nova imagem
         // escrever a img em uma novo arquivo
+
+
     }
 
 }
